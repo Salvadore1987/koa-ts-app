@@ -1,0 +1,41 @@
+{
+  "name": "koa-ts-app",
+  "version": "1.0.0",
+  "description": "KoaJS with TypeScript",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint --project tsconfig.json --format stylish",
+    "build": "tsc",
+    "serve": "ts-node src/app.ts",
+    "start": "nodemon"
+  },
+  "keywords": [
+    "koajs",
+    "nodejs",
+    "type-script",
+    "web"
+  ],
+  "author": "Salvadore",
+  "license": "ISC",
+  "dependencies": {
+    "@types/koa": "^2.0.50",
+    "@types/koa-logger": "^3.1.1",
+    "@types/koa-router": "^7.0.42",
+    "@types/mongoose": "^5.5.18",
+    "koa": "^2.8.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.7.1",
+    "typescript-ioc": "^1.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.8",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^3.6.3"
+  }
+}
