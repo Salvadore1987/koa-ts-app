@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "tslint --project tsconfig.json --format stylish",
     "build": "tsc",
-    "serve": "ts-node src/app.ts",
+    "serve": "ts-node src/server.ts",
     "start": "nodemon"
   },
   "keywords": [
@@ -20,6 +20,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/koa": "^2.0.50",
+    "@types/koa-bodyparser": "^4.3.0",
     "@types/koa-logger": "^3.1.1",
     "@types/koa-router": "^7.0.42",
     "@types/mongoose": "^5.5.18",
@@ -37,5 +38,13 @@
     "tslint": "^5.20.0",
     "tslint-config-airbnb": "^5.11.2",
     "typescript": "^3.6.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Salvadore1987/koa-ts-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Salvadore1987/koa-ts-app/issues"
+  },
+  "homepage": "https://github.com/Salvadore1987/koa-ts-app#readme"
 }

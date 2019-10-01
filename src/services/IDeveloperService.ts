@@ -1,9 +1,10 @@
-import Developer from "../models/Developer";
+import { IDeveloper } from "../models/Developer.model";
+
 
 export interface IDeveloperService {
-    findById(id: number): Promise<any>;
-    findAll(): Promise<any>;
-    save(model: Developer): Promise<any>;
-    update(id: number, model: Developer): Promise<any>;
+    findById(id: number): Promise<IDeveloper>;
+    findAll(): Promise<Array<IDeveloper>>;
+    save(doc: IDeveloper): Promise<IDeveloper>;
+    update(id: number, doc: IDeveloper): Promise<any>;
     remove(id: number): Promise<any>;
 }

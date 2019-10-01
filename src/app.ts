@@ -1,15 +1,24 @@
 import * as Koa from 'koa';
 import * as logger from 'koa-logger';
-import devRouter from './routes/DeveloperRoute';
+import { DeveloperRouter } from './routes/Developer.router';
 
-const app = new Koa();
-const port = 3000;
+class App {
+    public app: Koa;
+    public router: DeveloperRouter;
 
-app.listen(port, () => {
-    console.log(`Application running on http://localhost:${port}`);
-});
+    constructor() {
+        this.app = new Koa();
+        this.router = new DeveloperRouter();
+        this.config();
+    }
 
-app.use(logger());
-app.use(devRouter.routes());
-app.use(devRouter.allowedMethods());
+    private config(): void {
+        this.app.use(logger());
+        this.app.use(this.router.routes());
+        this.app.use(this.router.allowedMethods());
+
+    }
+}
+
+export default new App().app;
 
